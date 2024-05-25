@@ -4,6 +4,7 @@ import alemiz.stargate.handler.StarGatePacketHandler;
 import alemiz.stargate.protocol.StarGatePacket;
 import alemiz.stargate.protocol.types.PacketHelper;
 import alemiz.stargate.server.ServerSession;
+import dev.waterdog.waterdogpe.ProxyServer;
 import io.netty.buffer.ByteBuf;
 import romo.warpcorehelper.WarpCoreHelper;
 
@@ -37,6 +38,7 @@ public class WarpRequestPacket extends StarGatePacket {
         ServerSession client = WarpCoreHelper.getInstance().getWarpClients().get(this.serverName);
         if(client != null){
             client.sendPacket(this);
+            ProxyServer.getInstance().getPlayer(this.playerName).connect(ProxyServer.getInstance().getServerInfo(this.serverName));
         }
         return true;
     }
