@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WarpCoreHelper">
+    <output-path>$PROJECT_DIR$/../../plugins</output-path>
+    <root id="archive" name="WarpCoreHelper.jar">
+      <element id="module-output" name="WarpCoreHelper" />
+      <element id="dir-copy" path="$PROJECT_DIR$/resources" />
+    </root>
+  </artifact>
+</component>

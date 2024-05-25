@@ -1,0 +1,6 @@
+name: WarpCoreHelper
+main: romo.warpcorehelper.WarpCoreHelper
+author: RoMo_Official
+version: 1.0.0
+depends:
+  - StarGate
